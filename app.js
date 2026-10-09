@@ -1,0 +1,1 @@
+document.querySelectorAll('[data-path]').forEach(link=>{link.addEventListener('click',()=>{const select=document.getElementById('starting-point');if(select){select.value=link.dataset.path;}})});
