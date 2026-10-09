@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Turn a goal, budget, or existing idea into a clear business direction and launch plan.">
+  <title>Venture Desk — Find what to build</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="nav shell">
+    <a class="brand" href="#top" aria-label="Venture Desk home">Venture Desk</a>
+    <nav>
+      <a href="#paths">How it works</a>
+      <a href="#process">Process</a>
+      <a class="nav-cta" href="#start">Start a project</a>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero shell">
+      <div class="hero-copy">
+        <span class="eyebrow">Business discovery & launch</span>
+        <h1>You do not need the idea.<br><span>You need the right direction.</span></h1>
+        <p>Tell us your goals, budget, experience and timeline. We help you identify what is worth building, shape the opportunity and map the path to execution.</p>
+        <div class="hero-actions">
+          <a class="button primary" href="#start">Find my direction</a>
+          <a class="button secondary" href="#paths">See how it works</a>
+        </div>
+        <div class="trust-line">
+          <span>Idea discovery</span><span>Project validation</span><span>Launch planning</span>
+        </div>
+      </div>
+      <div class="hero-panel" aria-label="Project matching preview">
+        <div class="panel-top">
+          <span class="dot"></span>
+          <span>Opportunity assessment</span>
+          <span class="status">Reviewing</span>
+        </div>
+        <div class="panel-card">
+          <span class="mini-label">Your inputs</span>
+          <div class="input-row"><span>Goal</span><strong>Build a new income stream</strong></div>
+          <div class="input-row"><span>Budget</span><strong>Defined after review</strong></div>
+          <div class="input-row"><span>Experience</span><strong>Matched to opportunity</strong></div>
+        </div>
+        <div class="match-box">
+          <span class="mini-label">What you receive</span>
+          <div class="match-item"><b>01</b><div><strong>Opportunity shortlist</strong><p>Clear directions suited to you.</p></div></div>
+          <div class="match-item"><b>02</b><div><strong>Launch blueprint</strong><p>Scope, stages, budget logic and next moves.</p></div></div>
+          <div class="match-item"><b>03</b><div><strong>Execution path</strong><p>Build, partner, or referral based on the project.</p></div></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section shell" id="paths">
+      <div class="section-head">
+        <span class="eyebrow">Choose your starting point</span>
+        <h2>Where are you today?</h2>
+        <p>We start from your real situation, not from a fixed service list.</p>
+      </div>
+      <div class="path-grid">
+        <article class="path-card">
+          <span class="path-number">01</span>
+          <h3>I want to start something</h3>
+          <p>You have capital, ambition or time, but no clear business idea yet.</p>
+          <a href="#start" data-path="I need a business idea">Find an opportunity →</a>
+        </article>
+        <article class="path-card featured">
+          <span class="path-number">02</span>
+          <h3>I already have an idea</h3>
+          <p>You know what you want to build but need clarity, validation and a plan.</p>
+          <a href="#start" data-path="I already have an idea">Structure my idea →</a>
+        </article>
+        <article class="path-card">
+          <span class="path-number">03</span>
+          <h3>I want to grow an existing business</h3>
+          <p>You already operate something and want a new product, channel or revenue line.</p>
+          <a href="#start" data-path="I want to grow an existing business">Explore growth paths →</a>
+        </article>
+      </div>
+    </section>
+
+    <section class="section process-wrap" id="process">
+      <div class="shell">
+        <div class="section-head light">
+          <span class="eyebrow">From uncertainty to action</span>
+          <h2>A simple process with a clear outcome.</h2>
+        </div>
+        <div class="steps">
+          <div class="step"><span>01</span><h3>Tell us your situation</h3><p>Goals, budget, skills, market, timeline and what success looks like.</p></div>
+          <div class="step"><span>02</span><h3>We assess the opportunity</h3><p>We identify viable directions and eliminate weak or mismatched options.</p></div>
+          <div class="step"><span>03</span><h3>You get a launch path</h3><p>We turn the chosen direction into a practical blueprint and execution route.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section shell start-section" id="start">
+      <div class="start-copy">
+        <span class="eyebrow">Start here</span>
+        <h2>Tell us what you want to achieve.</h2>
+        <p>You do not need a finished idea. Give us the facts. We will use them to understand what direction makes sense.</p>
+        <div class="note">No generic idea list. Every request is reviewed around the person, budget and market context.</div>
+      </div>
+
+      <form class="lead-form" name="project-intake" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+        <input type="hidden" name="form-name" value="project-intake">
+        <p class="hidden"><label>Do not fill this out: <input name="bot-field"></label></p>
+
+        <label>What best describes you?
+          <select name="starting_point" id="starting-point" required>
+            <option value="" selected disabled>Select one</option>
+            <option>I need a business idea</option>
+            <option>I already have an idea</option>
+            <option>I want to build a digital product</option>
+            <option>I want to grow an existing business</option>
+            <option>I am not sure yet</option>
+          </select>
+        </label>
+
+        <div class="form-grid">
+          <label>Your name<input type="text" name="name" autocomplete="name" required></label>
+          <label>Country<input type="text" name="country" placeholder="Berlin, Germany" required></label>
+        </div>
+
+        <div class="form-grid">
+          <label>Budget range
+            <select name="budget" required>
+              <option value="" selected disabled>Select range</option>
+              <option>Under $2,000</option>
+              <option>$2,000–$10,000</option>
+              <option>$10,000–$50,000</option>
+              <option>$50,000+</option>
+              <option>Not decided yet</option>
+            </select>
+          </label>
+          <label>When do you want to start?
+            <select name="timeline" required>
+              <option value="" selected disabled>Select timeline</option>
+              <option>Immediately</option>
+              <option>Within 30 days</option>
+              <option>Within 3 months</option>
+              <option>Later / exploring</option>
+            </select>
+          </label>
+        </div>
+
+        <label>What are you trying to achieve?
+          <textarea name="goal" rows="4" placeholder="Describe the result you want, your experience, market or any idea you already have." required></textarea>
+        </label>
+
+        <div class="form-grid">
+          <label>Email<input type="email" name="email" autocomplete="email" required></label>
+          <label>WhatsApp / phone<input type="tel" name="phone" autocomplete="tel" required></label>
+        </div>
+
+        <button class="button primary submit" type="submit">Submit for review</button>
+        <p class="form-foot">Your information is used only to review your request and contact you about it.</p>
+      </form>
+    </section>
+  </main>
+
+  <footer class="footer shell">
+    <span>Venture Desk</span>
+    <span>Project discovery · Validation · Launch planning</span>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
