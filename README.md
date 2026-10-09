@@ -1,6 +1,6 @@
-# NawarJob
+# Digital Venture Studio
 
-A Dockerized project discovery and lead-management system.
+A Dockerized digital venture discovery and lead-management system.
 
 ## Stack
 
@@ -28,6 +28,8 @@ Open:
 The public application form writes directly to PostgreSQL through the FastAPI API. Leads are scored automatically and can be moved through:
 
 `New -> Contacted -> Qualified -> Proposal -> Won / Lost`
+
+The public brand name is intentionally temporary and can be replaced later without changing the application architecture.
 
 ## Before production
 
