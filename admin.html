@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex,nofollow">
+  <title>Nawar CRM</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/static/styles.css">
+  <style>
+    body{background:#f3f1ec}.crm-shell{width:min(1440px,calc(100% - 32px));margin:auto;padding:28px 0 60px}.crm-top{display:flex;justify-content:space-between;gap:18px;align-items:center;margin-bottom:22px}.crm-top h1{margin:0;font-size:2rem;letter-spacing:-.04em}.toolbar{display:grid;grid-template-columns:1.3fr .7fr .7fr auto;gap:10px;margin-bottom:18px}.toolbar input,.toolbar select,.auth input,.lead-status,.lead-notes{border:1px solid #d8d5cf;background:#fff;border-radius:12px;padding:12px 13px;font:inherit}.stats{display:grid;grid-template-columns:repeat(7,1fr);gap:10px;margin-bottom:18px}.stat{background:#fff;border:1px solid var(--line);border-radius:16px;padding:15px}.stat b{display:block;font-size:1.45rem}.stat span{font-size:.72rem;color:var(--muted)}.auth{background:#fff;border:1px solid var(--line);border-radius:20px;padding:20px;margin-bottom:18px;display:flex;gap:10px;align-items:center}.auth input{flex:1}.board{display:grid;gap:12px}.lead{background:#fff;border:1px solid var(--line);border-radius:20px;padding:20px;display:grid;grid-template-columns:1.2fr .8fr .8fr;gap:18px}.lead h3{margin:0 0 5px;font-size:1.1rem}.lead small{color:var(--muted)}.badges{display:flex;gap:6px;flex-wrap:wrap;margin:11px 0}.badge{font-size:.68rem;font-weight:700;padding:6px 9px;border-radius:999px;background:#efede8}.priority-High{background:#d8ff3e}.priority-Medium{background:#fff0a8}.lead p{font-size:.85rem;line-height:1.5;color:var(--muted);margin:8px 0}.lead-meta{font-size:.78rem;display:grid;gap:7px}.lead-actions{display:grid;gap:8px;align-content:start}.lead-status,.lead-notes{width:100%}.lead-notes{min-height:96px;resize:vertical}.save{border:0;border-radius:999px;padding:11px 14px;background:#111317;color:white;font-weight:700;cursor:pointer}.empty{text-align:center;padding:50px;color:var(--muted)}@media(max-width:900px){.stats{grid-template-columns:repeat(2,1fr)}.toolbar{grid-template-columns:1fr 1fr}.lead{grid-template-columns:1fr}.crm-top{align-items:flex-start;flex-direction:column}}@media(max-width:560px){.toolbar{grid-template-columns:1fr}.auth{flex-direction:column;align-items:stretch}}
+  </style>
+</head>
+<body>
+  <main class="crm-shell">
+    <div class="crm-top"><div><span class="eyebrow">Private admin</span><h1>Lead CRM</h1></div><a class="button secondary" href="/">Public site</a></div>
+
+    <section class="auth" id="auth-box">
+      <input id="admin-key" type="password" placeholder="Admin key" autocomplete="current-password">
+      <button class="button primary" id="connect" type="button">Open CRM</button>
+    </section>
+
+    <section id="crm" hidden>
+      <div class="stats" id="stats"></div>
+      <div class="toolbar">
+        <input id="search" type="search" placeholder="Search name, email, phone or country">
+        <select id="status-filter"><option value="">All statuses</option><option>New</option><option>Contacted</option><option>Qualified</option><option>Proposal</option><option>Won</option><option>Lost</option></select>
+        <select id="priority-filter"><option value="">All priorities</option><option>High</option><option>Medium</option><option>Low</option></select>
+        <button class="button secondary" id="refresh" type="button">Refresh</button>
+      </div>
+      <div class="board" id="leads"></div>
+    </section>
+  </main>
+  <script src="/static/admin.js"></script>
+</body>
+</html>
