@@ -10,7 +10,7 @@ from sqlalchemy import create_engine, String, Text, Integer, DateTime, select, f
 from sqlalchemy.orm import DeclarativeBase, Mapped, mapped_column, Session, sessionmaker
 
 DATABASE_URL = os.getenv("DATABASE_URL", "postgresql+psycopg://nawar:nawar@postgres:5432/nawarjob")
-ADMIN_KEY = os.getenv("ADMIN_KEY", "change-me")
+ADMIN_KEY = os.getenv("ADMIN_KEY", "").strip()
 
 engine = create_engine(DATABASE_URL, pool_pre_ping=True)
 SessionLocal = sessionmaker(bind=engine, autoflush=False, autocommit=False)
