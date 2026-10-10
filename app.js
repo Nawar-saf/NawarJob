@@ -89,7 +89,6 @@ if(intakeForm){
     const keys=['name','phone','country','starting_point','background','available_time','budget','timeline','model','risk_preference','goal','source','utm_source','utm_medium','utm_campaign','referrer'];
     const payload={};
     keys.forEach(key=>payload[key]=form.get(key)||null);
-    payload.email=`lead-${Date.now()}@example.com`;
 
     try{
       const response=await fetch('/api/leads',{
