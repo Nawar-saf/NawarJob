@@ -1,3 +1,8 @@
+const localeStyle=document.createElement('link');
+localeStyle.rel='stylesheet';
+localeStyle.href='locale.css';
+document.head.appendChild(localeStyle);
+
 const intakeForm=document.querySelector('form[name="project-intake"]');
 const startingPoint=document.getElementById('starting-point');
 const langToggle=document.getElementById('lang-toggle');
