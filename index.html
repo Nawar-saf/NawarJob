@@ -11,158 +11,188 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <header class="nav shell">
-    <a class="brand" href="#top" aria-label="Home">Digital Venture Studio</a>
-    <nav>
-      <a href="#paths">Venture paths</a>
-      <a href="#opportunities">Idea portfolio</a>
-      <a href="#build">Capabilities</a>
-      <a href="#process">Process</a>
-      <a class="nav-cta" href="#apply">Project intake</a>
-    </nav>
-  </header>
+  <div class="site-top" id="top">
+    <header class="nav shell">
+      <a class="brand" href="#top" aria-label="Home">
+        <span class="brand-mark" aria-hidden="true"><i></i></span>
+        <span>Digital Venture Studio</span>
+      </a>
+      <nav>
+        <a class="active" href="#top">Home</a>
+        <a href="#process">How it works</a>
+        <a href="#services">Services</a>
+        <a href="#examples">Examples</a>
+        <a href="#about">About</a>
+      </nav>
+      <a class="nav-cta" href="#apply">Get started <span>→</span></a>
+    </header>
 
-  <main id="top">
     <section class="hero shell">
       <div class="hero-copy">
-        <span class="eyebrow">Digital ventures · Apps · Platforms · Business systems</span>
-        <h1>From opportunity to a launchable <span>digital product.</span></h1>
-        <p>We develop digital venture ideas, validate product concepts and structure the execution of apps, platforms, SaaS products and systems built around real business operations.</p>
+        <h1>From Idea or Capital<br>to a Launchable <span>Digital Product</span></h1>
+        <p>We develop standout digital project ideas, validate product concepts, and structure apps, platforms, SaaS products and custom systems built around real business needs.</p>
+        <div class="hero-points">
+          <span><i>✓</i> Apps & Platforms</span>
+          <span><i>✓</i> Digital Venture Ideas</span>
+          <span><i>✓</i> Custom Business Systems</span>
+        </div>
         <div class="hero-actions">
-          <a class="button primary" href="#apply">Start a project review</a>
-          <a class="button secondary" href="#opportunities">View the idea portfolio</a>
-        </div>
-        <div class="trust-line">
-          <span>Digital venture ideas</span><span>Product strategy</span><span>SaaS</span><span>Marketplaces</span><span>AI products</span><span>Business systems</span>
+          <a class="button primary" href="#apply">Start your project <span>→</span></a>
+          <a class="video-link" href="#process"><b>▶</b><span><strong>How it works</strong><small>See the process</small></span></a>
         </div>
       </div>
 
-      <aside class="hero-panel" aria-label="Digital venture framework">
-        <div class="panel-top"><span class="dot"></span><span>Venture framework</span><span class="status">01</span></div>
-        <div class="panel-card">
-          <span class="mini-label">Core assessment</span>
-          <div class="input-row"><span>Opportunity</span><strong>Demand, problem and market logic</strong></div>
-          <div class="input-row"><span>Business model</span><strong>Revenue structure and scalability</strong></div>
-          <div class="input-row"><span>Product</span><strong>Platform, app, SaaS or operating system</strong></div>
-          <div class="input-row"><span>Execution</span><strong>MVP scope, sequence and technical route</strong></div>
+      <div class="product-visual" aria-label="Digital product dashboard preview">
+        <div class="laptop">
+          <div class="laptop-screen">
+            <div class="dash-sidebar">
+              <span class="dash-logo">D</span>
+              <span class="dash-link active"></span>
+              <span class="dash-link"></span>
+              <span class="dash-link"></span>
+              <span class="dash-link"></span>
+              <span class="dash-link"></span>
+            </div>
+            <div class="dash-main">
+              <div class="dash-head"><strong>Dashboard</strong><span>Last 30 days</span></div>
+              <div class="metric-row">
+                <div class="metric"><small>Total users</small><b>12,840</b><em>+12%</em></div>
+                <div class="metric"><small>Projects</small><b>24</b><em>+18%</em></div>
+                <div class="metric"><small>Revenue</small><b>$24.5K</b><em>+14%</em></div>
+              </div>
+              <div class="chart-card">
+                <div class="chart-title"><strong>Growth overview</strong><span>Users</span></div>
+                <svg viewBox="0 0 420 150" role="img" aria-label="Growth chart">
+                  <defs><linearGradient id="area" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#2386ff" stop-opacity=".22"/><stop offset="1" stop-color="#2386ff" stop-opacity="0"/></linearGradient></defs>
+                  <path d="M5 126 C35 119,52 126,78 108 S125 83,151 96 S195 106,222 74 S269 63,292 71 S338 48,363 51 S395 28,415 19 L415 145 L5 145 Z" fill="url(#area)"/>
+                  <path d="M5 126 C35 119,52 126,78 108 S125 83,151 96 S195 106,222 74 S269 63,292 71 S338 48,363 51 S395 28,415 19" fill="none" stroke="#2386ff" stroke-width="4" stroke-linecap="round"/>
+                </svg>
+              </div>
+              <div class="activity-row"><span></span><span></span><span></span></div>
+            </div>
+          </div>
+          <div class="laptop-base"></div>
         </div>
-        <div class="match-box">
-          <span class="mini-label">Output</span>
-          <div class="match-item"><b>01</b><div><strong>Digital venture concept</strong><p>An existing or newly developed digital product direction matched to the market and available capital.</p></div></div>
-          <div class="match-item"><b>02</b><div><strong>Product blueprint</strong><p>Users, revenue model, product flow, MVP, risks and launch priorities.</p></div></div>
-          <div class="match-item"><b>03</b><div><strong>Execution route</strong><p>A clear path from concept to a working product or business system.</p></div></div>
-        </div>
-      </aside>
-    </section>
 
-    <section class="ticker" aria-label="Digital product types">
-      <div class="ticker-track">
-        <span>Apps</span><i>•</i><span>Platforms</span><i>•</i><span>SaaS</span><i>•</i><span>Marketplaces</span><i>•</i><span>AI products</span><i>•</i><span>Business systems</span><i>•</i><span>Automation</span>
-      </div>
-    </section>
-
-    <section class="section shell" id="paths">
-      <div class="section-head">
-        <span class="eyebrow">Venture paths</span>
-        <h2>Three starting points. One product discipline.</h2>
-        <p>Every engagement is built around a digital product or system with a defined business case, operating logic and path to execution.</p>
-      </div>
-
-      <div class="path-grid">
-        <article class="path-card">
-          <span class="path-number">01</span>
-          <h3>Digital Venture Portfolio</h3>
-          <p>For capital seeking a project. We already maintain and develop digital venture concepts, then match the strongest candidates to budget, market, experience and growth potential.</p>
-          <a href="#apply" data-path="I need a business idea">Explore standout digital project ideas →</a>
-        </article>
-        <article class="path-card featured">
-          <span class="path-number">02</span>
-          <h3>Product Validation</h3>
-          <p>For an existing app, platform or SaaS concept. We define commercial logic, revenue structure, target users and the first version worth launching.</p>
-          <a href="#apply" data-path="I already have an idea">Submit a product concept →</a>
-        </article>
-        <article class="path-card">
-          <span class="path-number">03</span>
-          <h3>Business Systems</h3>
-          <p>For existing operations that need software built around the way the business actually works — not another disconnected tool.</p>
-          <a href="#apply" data-path="I want to grow an existing business">Submit an operating challenge →</a>
-        </article>
-      </div>
-    </section>
-
-    <section class="section shell" id="opportunities">
-      <div class="section-head">
-        <span class="eyebrow">Digital idea portfolio</span>
-        <h2>Digital venture ideas are already part of the studio.</h2>
-        <p>Clients do not need to arrive with an idea. We maintain a working pipeline of digital business concepts designed to become apps, platforms, SaaS products, marketplaces, AI products or software systems. Each concept is reviewed against the client’s capital, target market and operating profile before it moves into validation and blueprinting.</p>
-      </div>
-      <div class="offer-list">
-        <article class="offer-card"><span>01</span><div><h3>Marketplace Concepts</h3><p>Digital businesses that connect two or more sides of a market through discovery, matching, transactions or managed supply.</p></div></article>
-        <article class="offer-card"><span>02</span><div><h3>Service Platform Concepts</h3><p>Apps and platforms built around booking, scheduling, service delivery, provider management and recurring customer relationships.</p></div></article>
-        <article class="offer-card"><span>03</span><div><h3>SaaS Concepts</h3><p>Recurring-revenue software ideas built around narrow operational problems with measurable business value.</p></div></article>
-        <article class="offer-card"><span>04</span><div><h3>AI Product Concepts</h3><p>Focused digital products where AI improves a workflow, decision, service or user outcome rather than existing as a generic feature.</p></div></article>
-        <article class="offer-card"><span>05</span><div><h3>Business System Concepts</h3><p>Software products for sales, customers, orders, inventory, staff, approvals, reporting and multi-step operations.</p></div></article>
-        <article class="offer-card"><span>06</span><div><h3>Automation Product Concepts</h3><p>Integrated digital systems that remove repetitive work, connect fragmented tools and centralize data and execution.</p></div></article>
-      </div>
-    </section>
-
-    <section class="section offer-section" id="build">
-      <div class="shell offer-grid">
-        <div class="section-head sticky-copy">
-          <span class="eyebrow">Capabilities</span>
-          <h2>Strategy before development. Structure before scale.</h2>
-          <p>The objective is to define the right digital product before committing capital to development.</p>
-        </div>
-        <div class="offer-list">
-          <article class="offer-card"><span>01</span><div><h3>Opportunity Research</h3><p>Market gaps, business model options, competitive context, operator fit and commercial viability.</p></div></article>
-          <article class="offer-card"><span>02</span><div><h3>Product Blueprint</h3><p>Target users, revenue streams, product flow, MVP scope, operational logic, risks and launch priorities.</p></div></article>
-          <article class="offer-card"><span>03</span><div><h3>System Architecture</h3><p>Core modules, workflows, integrations, user roles, data structure and technical scope for execution.</p></div></article>
-          <article class="offer-card"><span>04</span><div><h3>Execution Planning</h3><p>Build stages, priorities, team requirements and the route from blueprint to a working first release.</p></div></article>
+        <div class="phone">
+          <div class="phone-notch"></div>
+          <div class="phone-inner">
+            <small>9:41</small>
+            <h4>Hello</h4>
+            <p>Manage your business.</p>
+            <div class="phone-grid">
+              <span>Orders</span><span>Clients</span><span>Projects</span><span>Reports</span>
+            </div>
+            <div class="phone-stat"><small>Today</small><b>$2,450</b></div>
+            <div class="mini-bars"><i></i><i></i><i></i><i></i><i></i><i></i></div>
+          </div>
         </div>
       </div>
     </section>
+  </div>
 
-    <section class="section process-wrap" id="process">
-      <div class="shell">
-        <div class="section-head light">
-          <span class="eyebrow">Process</span>
-          <h2>Opportunity. Validation. Blueprint. Execution.</h2>
+  <main class="main-shell shell">
+    <div class="content-column">
+      <section class="compact-section" id="services">
+        <div class="section-title">
+          <h2>Three ways we work with a project</h2>
+          <p>Every route stays focused on digital products and software systems.</p>
         </div>
-        <div class="steps">
-          <div class="step"><span>01</span><h3>Profile</h3><p>Capital, market, experience, existing operation, constraints and strategic objective.</p></div>
-          <div class="step"><span>02</span><h3>Assessment</h3><p>Commercial logic, user problem, revenue model, operating requirements and product fit.</p></div>
-          <div class="step"><span>03</span><h3>Blueprint</h3><p>Product structure, user flows, MVP scope, system modules, risks and launch sequence.</p></div>
-          <div class="step"><span>04</span><h3>Execution</h3><p>A defined technical route with clear priorities instead of development around an undefined concept.</p></div>
+        <div class="path-grid">
+          <article class="path-card">
+            <span class="path-icon idea">✦</span>
+            <div>
+              <h3>Standout Digital Project Ideas</h3>
+              <p>Choose from digital venture ideas already developed inside the studio, then match the strongest option to budget, market and operator profile.</p>
+            </div>
+            <a href="#apply" data-path="I need a business idea">→</a>
+          </article>
+          <article class="path-card">
+            <span class="path-icon product">↗</span>
+            <div>
+              <h3>Product Validation</h3>
+              <p>Turn an app, platform or SaaS concept into a clear business model, product structure and first release plan.</p>
+            </div>
+            <a href="#apply" data-path="I already have an idea">→</a>
+          </article>
+          <article class="path-card">
+            <span class="path-icon system">▦</span>
+            <div>
+              <h3>Business Systems</h3>
+              <p>Design software around an existing operation to simplify workflows, centralize data and remove repetitive work.</p>
+            </div>
+            <a href="#apply" data-path="I want to grow an existing business">→</a>
+          </article>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <section class="section shell profile-section">
-      <div class="profile-card">
-        <div><span class="eyebrow">Operating principle</span><h2>Capital should enter development after the business case is clear.</h2></div>
-        <div class="profile-copy">
-          <p>New ventures begin with the opportunity, customer, revenue logic and product structure. Existing businesses begin with the workflow, bottlenecks and operational value the system must create.</p>
-          <p>The result is a digital product designed around a commercial reason, not software built for its own sake.</p>
+      <section class="compact-section" id="process">
+        <div class="section-title">
+          <h2>Our process</h2>
+          <p>From opportunity to a buildable digital product or system.</p>
         </div>
-      </div>
-    </section>
+        <div class="process-line">
+          <article><b>1</b><div><h3>Discovery</h3><p>Goals, market, capital, workflow and constraints.</p></div></article>
+          <span>→</span>
+          <article><b>2</b><div><h3>Analysis</h3><p>Commercial logic, target users and product fit.</p></div></article>
+          <span>→</span>
+          <article><b>3</b><div><h3>Blueprint</h3><p>Business model, flows, MVP and technical scope.</p></div></article>
+          <span>→</span>
+          <article><b>4</b><div><h3>Execution</h3><p>Build route, priorities and launch sequence.</p></div></article>
+        </div>
+      </section>
 
-    <section class="section shell start-section" id="apply">
-      <div class="start-copy">
-        <span class="eyebrow">Project intake</span>
-        <h2>Digital venture and system review.</h2>
-        <p>Applications may begin with capital, an existing digital product concept or an operating business that requires a dedicated software system.</p>
-        <div class="note">The studio works specifically with digital ventures and software systems: apps, platforms, SaaS, marketplaces, AI products, automation and custom operating software.</div>
-      </div>
+      <section class="compact-section" id="examples">
+        <div class="section-title">
+          <h2>Digital project directions</h2>
+          <p>Examples of the types of products and systems we shape.</p>
+        </div>
+        <div class="example-grid">
+          <article class="example-card">
+            <div class="example-visual marketplace"><div class="mini-phone-card"><span></span><span></span><span></span></div></div>
+            <h3>Marketplace Platform</h3><p>Connect buyers and sellers.</p>
+          </article>
+          <article class="example-card">
+            <div class="example-visual booking"><div class="calendar-ui"><b>12</b><span></span><span></span></div></div>
+            <h3>Booking Platform</h3><p>Reservations and service delivery.</p>
+          </article>
+          <article class="example-card">
+            <div class="example-visual system-ui"><div class="dash-mini"><i></i><i></i><i></i></div></div>
+            <h3>Business System</h3><p>Custom operations software.</p>
+          </article>
+          <article class="example-card">
+            <div class="example-visual ai-ui"><strong>AI</strong><span>◆</span></div>
+            <h3>AI Product</h3><p>AI applied to a real workflow.</p>
+          </article>
+          <article class="example-card">
+            <div class="example-visual saas-ui"><div class="saas-chart"><i></i><i></i><i></i><i></i></div></div>
+            <h3>Subscription SaaS</h3><p>Recurring-revenue software.</p>
+          </article>
+        </div>
+      </section>
 
+      <section class="compact-section about-section" id="about">
+        <div class="about-card">
+          <div><span class="eyebrow">Digital venture studio</span><h2>Ideas, structure and execution in one route.</h2></div>
+          <div><p>The studio works specifically with digital businesses and software systems. A project may begin with one of our own venture ideas, an existing concept, or an operating business that needs a dedicated system.</p><p>Before development, the business case, product logic and first viable version are defined clearly.</p></div>
+        </div>
+      </section>
+    </div>
+
+    <aside class="intake-column" id="apply">
       <form class="lead-form" name="project-intake">
+        <div class="form-title">
+          <h2>Start your project</h2>
+          <p>Share your situation and we will review the right digital route.</p>
+        </div>
+
         <label>Project starting point
           <select name="starting_point" id="starting-point" required>
             <option value="" selected disabled>Select one</option>
             <option value="I need a business idea">I want a standout digital project idea</option>
             <option value="I already have an idea">I already have an app, platform or SaaS idea</option>
             <option>I want to build a digital product</option>
-            <option value="I want to grow an existing business">My existing business needs a software system</option>
+            <option value="I want to grow an existing business">My business needs a software system</option>
             <option value="I have capital and want an opportunity">I have capital and want a digital opportunity</option>
             <option>I am not sure yet</option>
           </select>
@@ -174,13 +204,8 @@
         </div>
 
         <div class="form-grid">
-          <label>Background<input type="text" name="background" placeholder="Industry, role, business or experience" required></label>
-          <label>Operating commitment
-            <select name="available_time" required>
-              <option value="" selected disabled>Select one</option>
-              <option>Full-time</option><option>Part-time</option><option>I want an operator or team to run it</option><option>Not decided yet</option>
-            </select>
-          </label>
+          <label>Email<input type="email" name="email" autocomplete="email" required></label>
+          <label>WhatsApp / phone<input type="tel" name="phone" autocomplete="tel" required></label>
         </div>
 
         <div class="form-grid">
@@ -194,6 +219,16 @@
             <select name="timeline" required>
               <option value="" selected disabled>Select timeline</option>
               <option>Immediately</option><option>Within 30 days</option><option>Within 3 months</option><option>Within 6 months</option><option>Later / exploring</option>
+            </select>
+          </label>
+        </div>
+
+        <div class="form-grid">
+          <label>Background<input type="text" name="background" placeholder="Industry, role or business" required></label>
+          <label>Operating commitment
+            <select name="available_time" required>
+              <option value="" selected disabled>Select one</option>
+              <option>Full-time</option><option>Part-time</option><option>I want an operator or team to run it</option><option>Not decided yet</option>
             </select>
           </label>
         </div>
@@ -218,24 +253,20 @@
         </div>
 
         <label>Project brief
-          <textarea name="goal" rows="5" placeholder="Describe the digital opportunity, product concept, operating problem, target users, revenue objective or current workflow." required></textarea>
+          <textarea name="goal" rows="4" placeholder="Describe the idea, opportunity, business problem, target users or goal." required></textarea>
         </label>
 
-        <div class="form-grid">
-          <label>Email<input type="email" name="email" autocomplete="email" required></label>
-          <label>WhatsApp / phone<input type="tel" name="phone" autocomplete="tel" required></label>
-        </div>
-
-        <button class="button primary submit" type="submit">Submit for review</button>
+        <button class="button primary submit" type="submit">Submit request <span>→</span></button>
         <p class="form-foot">Information is used only to assess the project and contact the applicant.</p>
       </form>
-    </section>
+    </aside>
   </main>
 
   <footer class="footer shell">
     <span>Digital Venture Studio</span>
-    <span>Digital ventures · Apps · Platforms · Business systems</span>
+    <span>Apps · Platforms · SaaS · AI products · Business systems</span>
   </footer>
+
   <script src="app.js"></script>
 </body>
 </html>
