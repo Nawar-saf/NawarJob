@@ -57,8 +57,8 @@ function applyLanguage(lang){
 
   if(langToggle)langToggle.textContent=lang==='ar'?'English':'العربية';
   document.title=lang==='ar'
-    ?'Digital Venture Studio — مشاريع رقمية، تطبيقات، منصات وذكاء اصطناعي'
-    :'Digital Venture Studio — Ideas, Products, AI & Automation';
+    ?'Venture Studio — تطبيقات، منصات وذكاء اصطناعي'
+    :'Venture Studio — App & Platform Projects, AI & Automation';
 }
 
 if(langToggle){
