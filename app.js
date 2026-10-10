@@ -4,8 +4,26 @@ const startingPoint=document.getElementById('starting-point');
 function upsertHidden(name,value){
   if(!intakeForm)return;
   let input=intakeForm.querySelector(`input[name="${name}"]`);
-  if(!input){input=document.createElement('input');input.type='hidden';input.name=name;intakeForm.appendChild(input)}
+  if(!input){
+    input=document.createElement('input');
+    input.type='hidden';
+    input.name=name;
+    intakeForm.appendChild(input);
+  }
   input.value=value||'';
+}
+
+function prepareIntakeDefaults(){
+  if(!intakeForm)return;
+  const defaults={
+    country:'Not provided',
+    background:'Not provided',
+    available_time:'Not decided yet',
+    timeline:'Later / exploring',
+    model:'',
+    risk_preference:''
+  };
+  Object.entries(defaults).forEach(([name,value])=>upsertHidden(name,value));
 }
 
 function captureAttribution(){
@@ -15,68 +33,43 @@ function captureAttribution(){
   upsertHidden('source',params.get('utm_source')||document.referrer||'direct');
 }
 
-function simplifyIntake(){
-  if(!intakeForm)return;
-
-  const defaults={
-    country:'Not provided',
-    background:'Not provided',
-    available_time:'Not decided yet',
-    timeline:'Later / exploring',
-    model:'',
-    risk_preference:''
-  };
-
-  Object.entries(defaults).forEach(([name,value])=>{
-    const field=intakeForm.elements.namedItem(name);
-    if(!field)return;
-    field.required=false;
-    if(value&&!field.value)field.value=value;
-    const label=field.closest('label');
-    if(label)label.hidden=true;
-  });
-
-  intakeForm.querySelectorAll('.form-grid').forEach(grid=>{
-    const labels=[...grid.querySelectorAll('label')];
-    if(labels.length&&labels.every(label=>label.hidden))grid.hidden=true;
-  });
-
-  if(startingPoint){
-    [...startingPoint.options].forEach(option=>{
-      if(option.textContent.trim()==='I want to build a digital product'||option.textContent.trim()==='I have capital and want the right digital opportunity'){
-        option.remove();
-      }
-    });
-  }
-
-  const formTitle=intakeForm.querySelector('.form-title p');
-  if(formTitle)formTitle.textContent='Just the essentials. We will cover the rest during the project review.';
-}
-
 document.querySelectorAll('[data-path]').forEach(link=>{
   link.addEventListener('click',()=>{
-    if(startingPoint){startingPoint.value=link.dataset.path;startingPoint.dispatchEvent(new Event('change',{bubbles:true}))}
+    if(startingPoint){
+      startingPoint.value=link.dataset.path;
+      startingPoint.dispatchEvent(new Event('change',{bubbles:true}));
+    }
   });
 });
 
 if(intakeForm){
-  simplifyIntake();
+  prepareIntakeDefaults();
   captureAttribution();
+
   intakeForm.addEventListener('submit',async event=>{
     event.preventDefault();
     const button=intakeForm.querySelector('button[type="submit"]');
     const original=button.textContent;
-    button.disabled=true;button.textContent='Submitting…';
+    button.disabled=true;
+    button.textContent='Submitting…';
+
     const form=new FormData(intakeForm);
     const keys=['name','email','phone','country','starting_point','background','available_time','budget','timeline','model','risk_preference','goal','source','utm_source','utm_medium','utm_campaign','referrer'];
-    const payload={}; keys.forEach(k=>payload[k]=form.get(k)||null);
+    const payload={};
+    keys.forEach(key=>payload[key]=form.get(key)||null);
+
     try{
-      const response=await fetch('/api/leads',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(payload)});
+      const response=await fetch('/api/leads',{
+        method:'POST',
+        headers:{'Content-Type':'application/json'},
+        body:JSON.stringify(payload)
+      });
       if(!response.ok)throw new Error(await response.text());
       window.location.assign('/thanks.html');
     }catch(error){
       console.error(error);
-      button.disabled=false;button.textContent=original;
+      button.disabled=false;
+      button.textContent=original;
       alert('Your application could not be submitted. Please check your details and try again.');
     }
   });
