@@ -24,7 +24,7 @@ services:
         condition: service_healthy
     environment:
       DATABASE_URL: postgresql+psycopg://${POSTGRES_USER:-nawar}:${POSTGRES_PASSWORD:-change-this-db-password}@postgres:5432/${POSTGRES_DB:-nawarjob}
-      ADMIN_KEY: ${ADMIN_KEY:-change-this-admin-key}
+      ADMIN_KEY: ${ADMIN_KEY:?Set ADMIN_KEY in .env}
     ports:
       - "${APP_PORT:-8000}:8000"
 
