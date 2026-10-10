@@ -91,7 +91,7 @@ def score_lead(data: LeadCreate) -> tuple[int, str]:
     timeline_points = {"Immediately": 25, "Within 30 days": 20, "Within 3 months": 12, "Within 6 months": 8, "Later / exploring": 2}
     score += budget_points.get(data.budget, 0)
     score += timeline_points.get(data.timeline, 0)
-    if data.starting_point in {"I already have an idea", "I want to grow an existing business", "I have capital and want an opportunity"}:
+    if data.starting_point in {"I already have an idea", "I want to grow an existing business", "I want AI for an existing business", "I have capital and want an opportunity"}:
         score += 15
     if data.available_time in {"Full-time", "I want an operator or team to run it"}:
         score += 10
