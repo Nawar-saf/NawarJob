@@ -15,6 +15,44 @@ function captureAttribution(){
   upsertHidden('source',params.get('utm_source')||document.referrer||'direct');
 }
 
+function simplifyIntake(){
+  if(!intakeForm)return;
+
+  const defaults={
+    country:'Not provided',
+    background:'Not provided',
+    available_time:'Not decided yet',
+    timeline:'Later / exploring',
+    model:'',
+    risk_preference:''
+  };
+
+  Object.entries(defaults).forEach(([name,value])=>{
+    const field=intakeForm.elements.namedItem(name);
+    if(!field)return;
+    field.required=false;
+    if(value&&!field.value)field.value=value;
+    const label=field.closest('label');
+    if(label)label.hidden=true;
+  });
+
+  intakeForm.querySelectorAll('.form-grid').forEach(grid=>{
+    const labels=[...grid.querySelectorAll('label')];
+    if(labels.length&&labels.every(label=>label.hidden))grid.hidden=true;
+  });
+
+  if(startingPoint){
+    [...startingPoint.options].forEach(option=>{
+      if(option.textContent.trim()==='I want to build a digital product'||option.textContent.trim()==='I have capital and want the right digital opportunity'){
+        option.remove();
+      }
+    });
+  }
+
+  const formTitle=intakeForm.querySelector('.form-title p');
+  if(formTitle)formTitle.textContent='Just the essentials. We will cover the rest during the project review.';
+}
+
 document.querySelectorAll('[data-path]').forEach(link=>{
   link.addEventListener('click',()=>{
     if(startingPoint){startingPoint.value=link.dataset.path;startingPoint.dispatchEvent(new Event('change',{bubbles:true}))}
@@ -22,6 +60,7 @@ document.querySelectorAll('[data-path]').forEach(link=>{
 });
 
 if(intakeForm){
+  simplifyIntake();
   captureAttribution();
   intakeForm.addEventListener('submit',async event=>{
     event.preventDefault();
